@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: {{ .Release.Name }}-todo-ui-ingress
 spec:
-  ingressClassName: {{ .Values.todoui.ingressClassName }}
+  ingressClassName: {{ .Values.todoui.image.ingressClassName }}
   rules:
   - host: {{ .Values.todoui.rules.host }}
     http:
@@ -14,4 +14,4 @@ spec:
           service:
             name: {{ .Release.Name }}-todo-ui
             port: 
-              number: {{ .Values.todoui.port.number }}
+              number: {{ .Values.todoui.image.ports.port }}

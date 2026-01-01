@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: {{ .Release.Name }}-todo-ui
 spec:
-  type: {{ .Values.todoui.type }}
+  type: {{ .Values.todoui.image.type }}
   selector:
     app: {{ .Release.Name }}-todo-ui
   ports:
-    - port: {{ .Values.todoui.ports.port }}
-      targetPort: {{ .Values.todoui.ports.targetPort }}
+    - port: {{ .Values.todoui.image.ports.port }}
+      targetPort: {{ .Values.todoui.image.ports.targetPort }}
