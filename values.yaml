@@ -85,5 +85,3 @@ todoui:
   paths:
     pathType: Prefix
     path: "/"
-  port:
-    number: 80
